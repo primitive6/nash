@@ -1,0 +1,70 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Address1:</b>
+  <%= @property.address1 %>
+</p>
+
+<p>
+  <b>Address2:</b>
+  <%= @property.address2 %>
+</p>
+
+<p>
+  <b>City:</b>
+  <%= @property.city %>
+</p>
+
+<p>
+  <b>Postcode:</b>
+  <%= @property.postcode %>
+</p>
+
+<p>
+  <b>Country:</b>
+  <%= @property.country %>
+</p>
+
+<p>
+  <b>Propertytype:</b>
+  <%= @property.propertytype %>
+</p>
+
+<p>
+  <b>Emergencycontact:</b>
+  <%= @property.emergencycontact %>
+</p>
+
+<p>
+  <b>Numberofbedrooms:</b>
+  <%= @property.numberofbedrooms %>
+</p>
+
+<p>
+  <b>Sqaurefootage:</b>
+  <%= @property.sqaurefootage %>
+</p>
+
+<p>
+  <b>Maxtenantoccupancy:</b>
+  <%= @property.maxtenantoccupancy %>
+</p>
+
+<p>
+  <b>Desiredmonthlyrent:</b>
+  <%= @property.desiredmonthlyrent %>
+</p>
+
+<p>
+  <b>Numberofbathrooms:</b>
+  <%= @property.numberofbathrooms %>
+</p>
+
+<p>
+  <b>Landlord:</b>
+  <%= @property.landlord_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_property_path(@property) %> |
+<%= link_to 'Back', properties_path %>

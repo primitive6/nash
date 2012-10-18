@@ -1,4 +1,8 @@
 Nash::Application.routes.draw do
+  resources :properties
+
+  resources :landlords
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

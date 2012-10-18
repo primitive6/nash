@@ -1,0 +1,69 @@
+<%= form_for(@property) do |f| %>
+  <% if @property.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@property.errors.count, "error") %> prohibited this property from being saved:</h2>
+
+      <ul>
+      <% @property.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :address1 %><br />
+    <%= f.text_field :address1 %>
+  </div>
+  <div class="field">
+    <%= f.label :address2 %><br />
+    <%= f.text_field :address2 %>
+  </div>
+  <div class="field">
+    <%= f.label :city %><br />
+    <%= f.text_field :city %>
+  </div>
+  <div class="field">
+    <%= f.label :postcode %><br />
+    <%= f.text_field :postcode %>
+  </div>
+  <div class="field">
+    <%= f.label :country %><br />
+    <%= f.text_field :country %>
+  </div>
+  <div class="field">
+    <%= f.label :propertytype %><br />
+    <%= f.text_field :propertytype %>
+  </div>
+  <div class="field">
+    <%= f.label :emergencycontact %><br />
+    <%= f.number_field :emergencycontact %>
+  </div>
+  <div class="field">
+    <%= f.label :numberofbedrooms %><br />
+    <%= f.number_field :numberofbedrooms %>
+  </div>
+  <div class="field">
+    <%= f.label :sqaurefootage %><br />
+    <%= f.number_field :sqaurefootage %>
+  </div>
+  <div class="field">
+    <%= f.label :maxtenantoccupancy %><br />
+    <%= f.number_field :maxtenantoccupancy %>
+  </div>
+  <div class="field">
+    <%= f.label :desiredmonthlyrent %><br />
+    <%= f.text_field :desiredmonthlyrent %>
+  </div>
+  <div class="field">
+    <%= f.label :numberofbathrooms %><br />
+    <%= f.number_field :numberofbathrooms %>
+  </div>
+  <div class="field">
+    <%= f.label :landlord_id %><br />
+    <%= f.number_field :landlord_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
