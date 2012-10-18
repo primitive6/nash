@@ -1,47 +1,107 @@
-<h1>Listing properties</h1>
-
-<table>
-  <tr>
-    <th>Address1</th>
-    <th>Address2</th>
-    <th>City</th>
-    <th>Postcode</th>
-    <th>Country</th>
-    <th>Propertytype</th>
-    <th>Emergencycontact</th>
-    <th>Numberofbedrooms</th>
-    <th>Sqaurefootage</th>
-    <th>Maxtenantoccupancy</th>
-    <th>Desiredmonthlyrent</th>
-    <th>Numberofbathrooms</th>
-    <th>Landlord</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
-
-<% @properties.each do |property| %>
-  <tr>
-    <td><%= property.address1 %></td>
-    <td><%= property.address2 %></td>
-    <td><%= property.city %></td>
-    <td><%= property.postcode %></td>
-    <td><%= property.country %></td>
-    <td><%= property.propertytype %></td>
-    <td><%= property.emergencycontact %></td>
-    <td><%= property.numberofbedrooms %></td>
-    <td><%= property.sqaurefootage %></td>
-    <td><%= property.maxtenantoccupancy %></td>
-    <td><%= property.desiredmonthlyrent %></td>
-    <td><%= property.numberofbathrooms %></td>
-    <td><%= property.landlord_id %></td>
-    <td><%= link_to 'Show', property %></td>
-    <td><%= link_to 'Edit', edit_property_path(property) %></td>
-    <td><%= link_to 'Destroy', property, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
-<% end %>
-</table>
-
-<br />
-
-<%= link_to 'New Property', new_property_path %>
+<!-- main content -->
+			<div class="gt-content">
+				
+				<!-- Sidebar Box -->
+				<div class="gt-sidebar-box gt-sidebar-box-blue">
+					<!-- search -->
+					<div class="gt-search"><div class="gt-search-inner">
+						<input type="text" class="gt-search-text" value="Search properties" onfocus="javascript:if(this.value=='Search article archive')this.value='';" onblur="javascript:if(this.value=='')this.value='Search article archive';" />
+					</div></div><!-- /search -->
+				</div><!-- /Sidebar Box -->
+				
+				
+				<!-- Article List Table -->
+				<!-- This table can be used for listing things like articles, pages or blog entries -->
+				<h2 class="gt-table-head">Current Properties</h2>
+				<!-- Content Box -->
+				<div class="gt-content-box">
+				
+				<!-- Table Controls -->
+				<div class="gt-table-controls clearfix">
+					<form action="" class="gt-table-picker">
+						<select>
+							<option>Choose Section...</option>
+							<option>Blog</option>
+							<option>Contact</option>
+							<option>About</option>
+						</select>
+					</form>
+					<p class="gt-table-pager"><a class="current" href="">1</a> | <a href="">2</a> | <a href="">3</a> <a href="">&raquo;</a></p>
+				</div><!-- /Table Controls -->
+				<table border="0" class="gt-table gt-user-table">
+					<tbody>
+						<tr>
+							<td>
+								<h4><a href="">Coders seek better UI solutions for their web apps</a></h4>
+								<p>Here's a quick snippet of this article. It's the preview that shows the first couple lines.</p>
+								
+								<p class="gt-table-edit"><a href="">Edit</a></p>
+							</td>
+							<td>
+								<!-- Categories Sub Table -->
+								<table border="0" class="gt-table-categories">
+									<tr>
+										<th>Posted:</th>
+										<td>Yesterday</td>
+									</tr>
+									<tr>
+										<th>Category:</th>
+										<td><a href="">Blog</a></td>
+									</tr>
+								</table>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<h4><a href="">Coders seek better UI solutions for their web apps</a></h4>
+								<p>Here's a quick snippet of this article. It's the preview that shows the first couple lines.</p>
+								
+								<p class="gt-table-edit"><a href="">Edit</a></p>
+							</td>
+							<td>
+								<!-- Categories Sub Table -->
+								<table border="0" class="gt-table-categories">
+									<tr>
+										<th>Posted:</th>
+										<td>Yesterday</td>
+									</tr>
+									<tr>
+										<th>Category:</th>
+										<td><a href="">Blog</a></td>
+									</tr>
+								</table>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<h4><a href="">Coders seek better UI solutions for their web apps</a></h4>
+								<p>Here's a quick snippet of this article. It's the preview that shows the first couple lines.</p>
+								
+								<p class="gt-table-edit"><a href="">Edit</a></p>
+							</td>
+							<td>
+								<!-- Categories Sub Table -->
+								<table border="0" class="gt-table-categories">
+									<tr>
+										<th>Posted:</th>
+										<td>Yesterday</td>
+									</tr>
+									<tr>
+										<th>Category:</th>
+										<td><a href="">Blog</a></td>
+									</tr>
+								</table>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+				</div><!-- /Content Box -->
+				<!-- <div class="gt-table-buttons">
+					<a href="" class="gt-btn-blue-large">Add New Article</a>
+				</div> -->
+				<!-- / Article Table List -->
+				
+			</div>
+			<!-- / main content -->
+			<%= render 'layouts/property_sidebar' %>
+			

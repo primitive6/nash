@@ -1,90 +1,29 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
-	<head>
-		<title>Gooey Templates : Tables</title>
-		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-		<meta http-equiv="Expires" content="Tue, 01 Jan 1980 1:00:00 GMT" />
-		<meta http-equiv="Pragma" content="no-cache" />
-		<%= stylesheet_link_tag    "application", :media => "all" %>
-		<%= stylesheet_link_tag "reset-fonts", :media => "all" %>
-		<%= stylesheet_link_tag "gt-styles", :media => "all" %>
- 		
-  		<%= csrf_meta_tags %>
-	</head>
-	<body>
-		<!-- head -->
-		<div class="gt-hd clearfix">
-			<!-- leaf watermark -->
-			<div class="gt-leaf-watermark clearfix">
+		
+		<!-- Partial to head & nav bar -->
+		<%= render 'layouts/header' %>
+
+		
+		<!-- body -->
+		<div class="gt-bd gt-cols clearfix">
 			
-			<!-- head top -->
-			<div class="gt-hd-top clearfix">
 			
-				<div class="gt-fixed-wrap clearfix">
+
+			<%= yield %>
+				
 			
-				<!-- logo -->
-				<div class="gt-logo">
-					Propertygate <%= image_tag 'gt/leaf-logo-icon.png', :alt => 'leaf-logo-icon' %>
-				</div>
-				<!-- / logo -->
-				
-				<!-- utility box -->
-				<div class="gt-util-box">
-					<div class="gt-util-box-inner">
-						<p>welcome <strong>sarah</strong> <span class="gt-util-separator">|</span> <a href="">logout</a></p>
-					</div>
-				</div>
-				<!-- / utility box -->
-				
-				</div>
+			<!-- / main content -->
 			
-			</div><!-- /head top -->
 			
-			<!-- navbar -->
-			<div class="gt-navbar clearfix">
-				
-				<div class="gt-fixed-wrap clearfix">
-				
-				<!-- navigation -->
-				<div class="gt-nav">
-					<ul>
-						<li><a href="#">Home</a></li>
-						<li><a href="#">Base HTML</a></li>
-						<li><a href="#">Tables</a></li>
-						<li><a href="#">Forms</a></li>
-						<li><a href="#">Text Styles</a></li>
-						<li><a href="#">Buttons</a></li>
-						<li><a href="#">Login</a></li>
-					</ul>
-				</div><!-- / navigation -->
-				
-				<!-- search -->
-				<div class="gt-search"><div class="gt-search-inner">
-					<input type="text" class="gt-search-text" value="Search" onfocus="javascript:if(this.value=='Search')this.value='';" onblur="javascript:if(this.value=='')this.value='Search';" />
-				</div></div>
-				
-				</div>
-				
-			</div><!-- /navbar -->			
-		</div><!-- /leaf watermark -->
+			
 		</div>
-		<!-- / head -->
-
-
-
-
-
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Nash</title>
-  <%= stylesheet_link_tag    "application", :media => "all" %>
-  <%= javascript_include_tag "application" %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
-
-<%= yield %>
-
-</body>
+		<!-- / body -->
+		
+		<!-- footer -->
+		<div class="gt-footer"><div class="gt-footer-inner">
+			<%= render 'layouts/footer' %>
+		</div></div>
+		<!-- /footer -->
+	</body>
 </html>
