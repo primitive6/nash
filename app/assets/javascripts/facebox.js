@@ -84,7 +84,7 @@
     settings: {
       opacity      : 0.2,
       overlay      : true,
-      loadingImage : '../images/loading.gif',
+      loadingImage : '../nash/app/assets/images/closelabel.png',
       closeImage   : '../images/closelabel.png',
       imageTypes   : [ 'png', 'jpg', 'jpeg', 'gif' ],
       faceboxHtml  : '\
