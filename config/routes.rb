@@ -1,4 +1,5 @@
 Nash::Application.routes.draw do
+
   resources :properties
 
   resources :landlords

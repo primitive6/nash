@@ -30,69 +30,34 @@
 				</div><!-- /Table Controls -->
 				<table border="0" class="gt-table gt-user-table">
 					<tbody>
+					<% @properties.each do |property| %>
 						<tr>
 							<td>
-								<h4><a href="">Coders seek better UI solutions for their web apps</a></h4>
-								<p>Here's a quick snippet of this article. It's the preview that shows the first couple lines.</p>
+								<h4><a href=""><%= property.address1 %> <%= property.address2 %> <%= property.city %></a></h4>
+								<p><%= property.postcode %> <%= property.country %></p>
 								
-								<p class="gt-table-edit"><a href="">Edit</a></p>
+								<p class="gt-table-action-list">
+									<%= image_tag 'icons/building_edit.png', :alt => 'Edit' %> <%= link_to 'Edit', edit_property_path(property) %></p>
 							</td>
 							<td>
 								<!-- Categories Sub Table -->
 								<table border="0" class="gt-table-categories">
 									<tr>
 										<th>Posted:</th>
-										<td>Yesterday</td>
+										<td><%= property.created_at.strftime("%d %B %Y") %></td>
 									</tr>
 									<tr>
-										<th>Category:</th>
-										<td><a href="">Blog</a></td>
+										<th>Property Type:</th>
+										<td><%= property.propertytype %></td>
+									</tr>
+									<tr>
+										<th>Property Type:</th>
+										<td><%= property.propertytype %></td>
 									</tr>
 								</table>
 							</td>
 						</tr>
-						<tr>
-							<td>
-								<h4><a href="">Coders seek better UI solutions for their web apps</a></h4>
-								<p>Here's a quick snippet of this article. It's the preview that shows the first couple lines.</p>
-								
-								<p class="gt-table-edit"><a href="">Edit</a></p>
-							</td>
-							<td>
-								<!-- Categories Sub Table -->
-								<table border="0" class="gt-table-categories">
-									<tr>
-										<th>Posted:</th>
-										<td>Yesterday</td>
-									</tr>
-									<tr>
-										<th>Category:</th>
-										<td><a href="">Blog</a></td>
-									</tr>
-								</table>
-							</td>
-						</tr>
-						<tr>
-							<td>
-								<h4><a href="">Coders seek better UI solutions for their web apps</a></h4>
-								<p>Here's a quick snippet of this article. It's the preview that shows the first couple lines.</p>
-								
-								<p class="gt-table-edit"><a href="">Edit</a></p>
-							</td>
-							<td>
-								<!-- Categories Sub Table -->
-								<table border="0" class="gt-table-categories">
-									<tr>
-										<th>Posted:</th>
-										<td>Yesterday</td>
-									</tr>
-									<tr>
-										<th>Category:</th>
-										<td><a href="">Blog</a></td>
-									</tr>
-								</table>
-							</td>
-						</tr>
+					<% end %>
 					</tbody>
 				</table>
 				</div><!-- /Content Box -->
