@@ -1,5 +1,9 @@
 Nash::Application.routes.draw do
 
+  get "landlords/new"
+
+  match '/signup', to: 'landlords#new'
+
   resources :properties
 
   resources :landlords

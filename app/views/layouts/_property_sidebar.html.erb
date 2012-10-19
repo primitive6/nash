@@ -3,7 +3,7 @@
 				<div class="gt-sidebar-nav gt-sidebar-nav-blue">
 					<h3>Quick Links</h3>
 					<ul>
-						<li><%= link_to 'Add a New Property', new_property_path %></li>
+						<li><%= link_to 'Add a New Property', new_property_path, :rel => 'facebox' %></li>
 						<li><a href="">Edit User Settings</a></li>
 						<li><a href="">View Live Site</a></li>
 					</ul>
@@ -36,19 +36,19 @@
 					<h3>Users List</h3>
 					<ul class="gt-sidebar-list-content">
 						<li class="gt-sidebar-list-row">
-							<img class="gt-avatar-small" src="images/gt/avatar-small.gif" alt="avatar-small" width="25" height="25"/>
+							<%= image_tag 'gt/avatar-small.gif', :class => 'gt-avatar-small' %>
 							<h4><a href="">John Marker</a></h4>
 							<p>I love to color pictures!</p>
 						</li>
 						
 						<li class="gt-sidebar-list-row">
-							<img class="gt-avatar-small" src="images/gt/avatar-small.gif" alt="avatar-small" width="25" height="25"/>
+							<%= image_tag 'gt/avatar-small.gif', :class => 'gt-avatar-small' %>
 							<h4><a href="">Charlee Watts</a></h4>
 							<p>Eco-friendly is the way to go!</p>
 						</li>
 						
 						<li class="gt-sidebar-list-row">
-							<img class="gt-avatar-small" src="images/gt/avatar-small.gif" alt="avatar-small" width="25" height="25"/>
+							<%= image_tag 'gt/avatar-small.gif', :class => 'gt-avatar-small' %>
 							<h4><a href="">Sarah Smith</a></h4>
 							<p>I love to draw...</p>
 						</li>

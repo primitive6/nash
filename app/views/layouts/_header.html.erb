@@ -1,3 +1,5 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 		<title>Gooey Templates : CMS Style App</title>
 		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
@@ -5,6 +7,12 @@
 		<meta http-equiv="Pragma" content="no-cache" />
 		<%= stylesheet_link_tag 'reset-fonts', :media => "all" %>
 		<%= stylesheet_link_tag 'gt-styles', :media => "all" %>
+
+		<!-- Facebox inculdes -->
+		<%= javascript_include_tag "http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js" %>
+		<%= javascript_include_tag "facebox.js" %>
+		<%= stylesheet_link_tag "facebox.css" %>
+
 	</head>
 	<body>
 		<!-- head -->
@@ -45,11 +53,10 @@
 					<ul>
 						<li><a class="gt-active" href="#">Home</a></li>
 						<li><%= link_to "Properties & Tenants", properties_path %></li>
-						<li><a href="#">Tables</a></li>
-						<li><a href="#">Forms</a></li>
-						<li><a href="#">Text Styles</a></li>
-						<li><a href="">Buttons</a></li>
-						<li><a href="#">Login</a></li>
+						<li><a href="#">Work Orders</a></li>
+						<li><a href="#">Marketing</a></li>
+						<li><a href="#">Accounting</a></li>
+						<li><a href="">F.A.Q</a></li>
 					</ul>
 				</div><!-- / navigation -->
 				

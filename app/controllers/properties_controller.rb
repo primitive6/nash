@@ -1,4 +1,5 @@
-class PropertiesController < ApplicationController
+class PropertiesController < ApplicationController	
+
   # GET /properties
   # GET /properties.json
   def index
@@ -24,8 +25,9 @@ class PropertiesController < ApplicationController
   # GET /properties/new
   # GET /properties/new.json
   def new
+    # render :layout => "new_property"
     @property = Property.new
-
+    
     respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @property }
