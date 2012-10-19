@@ -25,13 +25,10 @@ class PropertiesController < ApplicationController
   # GET /properties/new
   # GET /properties/new.json
   def new
-    # render :layout => "new_property"
     @property = Property.new
+    render :partial => "new_property"
     
-    respond_to do |format|
-      format.html # new.html.erb
-      format.json { render json: @property }
-    end
+    
   end
 
   # GET /properties/1/edit
