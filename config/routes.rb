@@ -1,6 +1,12 @@
 Nash::Application.routes.draw do
 
-  get "landlords/new"
+  root :to => 'content_pages#home'
+
+  get "content_pages/home"
+
+  match '/help', to: 'content_pages#help'
+
+  match '/questions', to: 'content_pages#questions'
 
   match '/signup', to: 'landlords#new'
 
