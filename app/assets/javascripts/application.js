@@ -11,6 +11,5 @@
 // GO AFTER THE REQUIRES BELOW.
 //
 //= require jquery
-//= require jquery.facebox
 //= require jquery_ujs
 //= require_tree .
