@@ -41,10 +41,10 @@ class LandlordsController < ApplicationController
 
     respond_to do |format|
       if @landlord.save
-        format.html { redirect_to @landlord, notice: 'Landlord was successfully created.' }
+        format.html { redirect_to root_path, notice: 'Your account was successfully created.' }
         format.json { render json: @landlord, status: :created, location: @landlord }
       else
-        format.html { render action: "new" }
+        format.html { render :partial => "new_landlord" }
         format.json { render json: @landlord.errors, status: :unprocessable_entity }
       end
     end

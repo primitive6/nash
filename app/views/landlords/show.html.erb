@@ -1,15 +1,39 @@
 <p id="notice"><%= notice %></p>
+<!-- User List Table -->
+				<!-- This table can be used for listing things like users -->
+				<h2 class="gt-table-head"></h2>
+				<!-- Content Box -->
+				<div class="gt-content-box">
+					<table border="0" class="gt-table gt-user-table">
+						<tbody>
+							<tr>
+								<td class="gt-avatar"><%= image_tag 'gt/avatar.gif', :alt => 'avatar' %></td>
+								<td>
+									<h4><%= @landlord.name %></h4>
+									<p>My favorite color is green. I really like trees!</p>
+									
+									<p><%= link_to 'Edit', edit_landlord_path(@landlord), :class => 'gt-table-edit' %></p>
+								</td>
+								<td>
+									<!-- Categories Sub Table -->
+									<table border="0" class="gt-table-categories">
+										<tr>
+											<th>Email Address:</th>
+											<td><%= @landlord.email %></td>
+										</tr>
+										<tr>
+											<th>Friends:</th>
+											<td><a href="">Susan</a>, <a href="">Fred</a></td>
+										</tr>
+									</table>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div><!-- /Content Box -->
 
-<p>
-  <b>Name:</b>
-  <%= @landlord.name %>
-</p>
-
-<p>
-  <b>Email:</b>
-  <%= @landlord.email %>
-</p>
-
-
-<%= link_to 'Edit', edit_landlord_path(@landlord) %> |
-<%= link_to 'Back', landlords_path %>
+				<div class="gt-table-buttons">
+					<%= link_to 'Back', landlords_path, :class => 'gt-btn-blue-small' %>
+				</div>
+				
+				<!-- / User List -->
